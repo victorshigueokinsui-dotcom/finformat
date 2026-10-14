@@ -5,7 +5,7 @@
            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
   <Id>ac1b22b3-e85a-42e3-b003-3c56593e784f</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.1.0.0</Version>
   <ProviderName>Victor Shigueoki</ProviderName>
   <DefaultLocale>pt-BR</DefaultLocale>
   <DisplayName DefaultValue="FinFormat"/>
@@ -31,6 +31,9 @@
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Hosts>
       <Host xsi:type="Workbook">
+        <Runtimes>
+          <Runtime resid="Commands.Url" lifetime="long"/>
+        </Runtimes>
         <DesktopFormFactor>
           <FunctionFile resid="Commands.Url"/>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
@@ -120,10 +123,11 @@
         <bt:String id="Number.Label" DefaultValue="Formato Numérico"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="Font.Tip" DefaultValue="Alterna a cor da fonte: preto, azul (input), verde (link entre abas), vermelho (link externo)."/>
-        <bt:String id="Fill.Tip" DefaultValue="Alterna o preenchimento: nenhum, amarelo claro (premissa), cinza claro."/>
-        <bt:String id="Number.Tip" DefaultValue="Alterna o formato: 1,235 / 1,234.5 / 12.3% / 8.5x. Negativos entre parênteses e zero como traço."/>
+        <bt:String id="Font.Tip" DefaultValue="(Ctrl+Shift+C) Alterna a cor da fonte: preto, azul (input), verde (link entre abas), vermelho (link externo)."/>
+        <bt:String id="Fill.Tip" DefaultValue="(Ctrl+Shift+V) Alterna o preenchimento: nenhum, amarelo claro (premissa), cinza claro."/>
+        <bt:String id="Number.Tip" DefaultValue="(Ctrl+Shift+N) Alterna o formato: 1,235 / 1,234.5 / 12.3% / 8.5x. Negativos entre parênteses e zero como traço."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
+  <ExtendedOverrides Url="https://victorshigueokinsui-dotcom.github.io/finformat/shortcuts.json"/>
 </OfficeApp>

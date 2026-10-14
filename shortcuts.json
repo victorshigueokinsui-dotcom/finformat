@@ -1,0 +1,12 @@
+{
+  "actions": [
+    { "id": "fontCycle",   "type": "ExecuteFunction", "name": "Ciclo de cor da fonte" },
+    { "id": "fillCycle",   "type": "ExecuteFunction", "name": "Ciclo de preenchimento" },
+    { "id": "numberCycle", "type": "ExecuteFunction", "name": "Ciclo de formato numérico" }
+  ],
+  "shortcuts": [
+    { "action": "fontCycle",   "key": { "default": "Ctrl+Shift+C" } },
+    { "action": "fillCycle",   "key": { "default": "Ctrl+Shift+V" } },
+    { "action": "numberCycle", "key": { "default": "Ctrl+Shift+N" } }
+  ]
+}

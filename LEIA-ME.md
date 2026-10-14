@@ -40,6 +40,14 @@ aumente o número em `commands.js?v=1` (para `v=2`, `v=3`...). Feche e reabra o 
 Se a mudança não aparecer, limpe o cache apagando o conteúdo de
 `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` com o Excel fechado.
 
+## Atalhos de teclado
+
+- Ctrl+Shift+C: ciclo de cor da fonte
+- Ctrl+Shift+V: ciclo de preenchimento (conflita com "colar valores" do Excel; na primeira vez o Excel pergunta qual usar)
+- Ctrl+Shift+N: ciclo de formato numérico
+
+Para mudar as teclas, edite `shortcuts.json`.
+
 ## Notas
 
 - Separadores americanos (1,234.5): **Arquivo → Opções → Avançado**, desmarque *Usar separadores do sistema*
