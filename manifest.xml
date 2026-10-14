@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+           xsi:type="TaskPaneApp">
+  <Id>ac1b22b3-e85a-42e3-b003-3c56593e784f</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Victor Shigueoki</ProviderName>
+  <DefaultLocale>pt-BR</DefaultLocale>
+  <DisplayName DefaultValue="FinFormat"/>
+  <Description DefaultValue="Ciclos de cor, preenchimento e formato numérico para modelagem financeira, sem macros e com Ctrl+Z."/>
+  <IconUrl DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/logo-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/logo-64.png"/>
+  <SupportUrl DefaultValue="https://github.com/victorshigueokinsui-dotcom/finformat"/>
+  <AppDomains>
+    <AppDomain>https://victorshigueokinsui-dotcom.github.io</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="ExcelApi" MinVersion="1.9"/>
+    </Sets>
+  </Requirements>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/commands.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <FunctionFile resid="Commands.Url"/>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <CustomTab id="FinFormat.Tab">
+              <Group id="FinFormat.Group">
+                <Label resid="Group.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Logo.16"/>
+                  <bt:Image size="32" resid="Logo.32"/>
+                  <bt:Image size="80" resid="Logo.80"/>
+                </Icon>
+                <Control xsi:type="Button" id="FinFormat.Font">
+                  <Label resid="Font.Label"/>
+                  <Supertip>
+                    <Title resid="Font.Label"/>
+                    <Description resid="Font.Tip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Font.16"/>
+                    <bt:Image size="32" resid="Font.32"/>
+                    <bt:Image size="80" resid="Font.80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>fontCycle</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="FinFormat.Fill">
+                  <Label resid="Fill.Label"/>
+                  <Supertip>
+                    <Title resid="Fill.Label"/>
+                    <Description resid="Fill.Tip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Fill.16"/>
+                    <bt:Image size="32" resid="Fill.32"/>
+                    <bt:Image size="80" resid="Fill.80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>fillCycle</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="FinFormat.Number">
+                  <Label resid="Number.Label"/>
+                  <Supertip>
+                    <Title resid="Number.Label"/>
+                    <Description resid="Number.Tip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Num.16"/>
+                    <bt:Image size="32" resid="Num.32"/>
+                    <bt:Image size="80" resid="Num.80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>numberCycle</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
+              <Label resid="Tab.Label"/>
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Logo.16" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/logo-16.png"/>
+        <bt:Image id="Logo.32" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/logo-32.png"/>
+        <bt:Image id="Logo.80" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/logo-80.png"/>
+        <bt:Image id="Font.16" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/font-16.png"/>
+        <bt:Image id="Font.32" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/font-32.png"/>
+        <bt:Image id="Font.80" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/font-80.png"/>
+        <bt:Image id="Fill.16" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/fill-16.png"/>
+        <bt:Image id="Fill.32" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/fill-32.png"/>
+        <bt:Image id="Fill.80" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/fill-80.png"/>
+        <bt:Image id="Num.16" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/num-16.png"/>
+        <bt:Image id="Num.32" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/num-32.png"/>
+        <bt:Image id="Num.80" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/assets/num-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Commands.Url" DefaultValue="https://victorshigueokinsui-dotcom.github.io/finformat/commands.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Tab.Label" DefaultValue="FinFormat"/>
+        <bt:String id="Group.Label" DefaultValue="Ciclos"/>
+        <bt:String id="Font.Label" DefaultValue="Cor da Fonte"/>
+        <bt:String id="Fill.Label" DefaultValue="Preenchimento"/>
+        <bt:String id="Number.Label" DefaultValue="Formato Numérico"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="Font.Tip" DefaultValue="Alterna a cor da fonte: preto, azul (input), verde (link entre abas), vermelho (link externo)."/>
+        <bt:String id="Fill.Tip" DefaultValue="Alterna o preenchimento: nenhum, amarelo claro (premissa), cinza claro."/>
+        <bt:String id="Number.Tip" DefaultValue="Alterna o formato: 1,235 / 1,234.5 / 12.3% / 8.5x. Negativos entre parênteses e zero como traço."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
